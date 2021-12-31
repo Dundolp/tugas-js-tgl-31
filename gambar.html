@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="
+  form"
+    >
+      <select name="" id="hewan" onchange="pilih()">
+        <option value="Monyet">Monyet</option>
+        <option value="Kucing">Kucing</option>
+        <option value="Ayam">Ayam</option>
+        <option value="Sapi">Sapi</option>
+        <option value="Kambing">Kambing</option>
+      </select>
+    </form>
+    <br />
+    <img src="../Tugas tgl 31/Monyet.jpg" alt="human" id="gambar" />
+
+    <script>
+      function pilih() {
+        let hewan = document.getElementById("hewan");
+        let idx = hewan.selectedIndex;
+        console.log("buah index ke- " + idx + " adalah " + hewan[idx].value);
+        let gambar = document.getElementById("gambar");
+        gambar.src = "../Tugas tgl 31/" + hewan[idx].value + ".jpg";
+      }
+    </script>
+  </body>
+</html>
